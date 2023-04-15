@@ -4,9 +4,16 @@ micronaut:
 tracing:
   jaeger:
     enabled: true
-    sampler:
-      probability: 0.1
+
 netty:
   default:
     allocator:
       max-order: 3
+
+logger:
+  levels:
+    io:
+      micronaut:
+        http:
+          client: TRACE
+          server: TRACE
